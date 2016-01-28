@@ -28,6 +28,27 @@ $scope.compareArrays = function() {
   }
 }
 
+$scope.playBack = function(selection) {
+  console.log(selection);
+  var topLeftAudio = document.getElementById("topLeftAudio");
+  var topRightAudio = document.getElementById("topRightAudio");
+  var bottomLeftAudio = document.getElementById("bottomLeftAudio");
+  var bottomRightAudio = document.getElementById("bottomRightAudio");
+
+    if(selection == 'topLeft') {
+      topLeftAudio.play();
+    }
+    else if(selection == 'topRight') {
+      topRightAudio.play();
+    }
+    else if(selection == 'bottomLeft') {
+      bottomLeftAudio.play();
+    }
+    else if(selection == 'bottomRight') {
+      bottomRightAudio.play(); 
+    }
+
+}
 
 
 
