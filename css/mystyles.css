@@ -76,11 +76,11 @@ font-size: 5em;
   margin-top: 100px;
 }
 
- .middleSpace {
-  width: 400px;
-  background-color:#353333;
-  height: 30px;
-}
+/*  .middleSpace {
+ width: 400px;
+ background-color:#353333;
+ height: 30px;
+} */
 
 .upperVerticalSpace {
   height: 50px;

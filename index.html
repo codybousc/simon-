@@ -11,16 +11,15 @@
 
 <div class="outerCircle">
    <div class="buttonWrapper">
-     <button class="topLeft" ng-click="playerSelection(1); playBack('topLeft'); "></button>
+     <button class="topLeft" ng-click="playerSelection(1); playerButtonPress('topLeft'); "></button>
      <audio id="topLeftAudio" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></audio>
-     <button class="topRight" ng-click="playerSelection(2); playBack('topRight');"></button>
+     <button class="topRight" ng-click="playerSelection(2); playerButtonPress('topRight');"></button>
      <audio id="topRightAudio" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></audio>
    <div class="middleSpace"></div>
-     <button class="bottomLeft" ng-click="playerSelection(4); playBack('bottomLeft');"></button>
+     <button class="bottomLeft" ng-click="playerSelection(4); playerButtonPress('bottomLeft');"></button>
      <audio id="bottomLeftAudio" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></audio>
-     <button class="bottomRight" ng-click="playerSelection(3); playBack('bottomRight');;"></button>
+     <button class="bottomRight" ng-click="playerSelection(3); playerButtonPress('bottomRight');;"></button>
      <audio id="bottomRightAudio" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></audio>
-
    </div>
 </div>
 
