@@ -1,98 +1,99 @@
 body {
-  background-color: #475577;
-  font-family: Lato, sans-serif;
+/*   background-color: #475577;
+ */  font-family: Lato, sans-serif;
 }
 
-.square {
-  width: 15%;
-  height: 15%;
-  background-color: #FAC51C;
-  margin-bottom: .5%;
-  margin-right: .5%;
+.spacer {
+  height: 150px;
+  width: 100%;
 }
 
-.btn {
-  background-color: #475577;
+h1 {
+/* text-align: center;  */
+font-size: 5em;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-left: 13.5%;
+
 }
 
-.title {
-  font-size: 55px;
-  color: #FAC51C;
-  text-align: center;
-  margin-top: 3%;
-/*   margin-left: 7%;
- */}
-
-.marker {
-  font-size: 85px;
-  color: #475577;
-  text-align: center;
-  margin-left: 35%;
+.outerCircle {
+   background-color:#353333;
+   margin:0 auto;
+   height:600px;
+   width:600px;
+   -webkit-border-radius:50%;
+   -moz-border-radius:50%;
 }
 
-.firstRow {
-  display: inline-block;
+/* .simonCircle {
+  position: absolute;
+  background-color: #353333;
+  margin:10.5% 12%;
+  padding-top: 50px;
+  height:225px;
+  width:225px;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  z-index: 1;
+} */
+
+.topLeft {
+  background-color: #090;
+  width: 200px;
+  height: 200px;
+  border-radius: 100% 0 0 0;
+  right: 50%;
 }
 
-.secondRow {
-  display: inline-block;
+.topRight {
+  background-color: #bc2000;
+  width: 200px;
+  height: 200px;
+  left: 50%;
+  border-radius: 0 100% 0 0;
 }
 
-.thirdRow {
-  display: inline-block;
+.bottomRight {
+  background-color: #0002bc;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  border-radius: 0 0 100% 0;
 }
 
-.outerContainer {
-  margin-top: 5%;
-  margin-left: 34.5%;
-  height: 50%;
-  width: 70%;
+.bottomLeft {
+  background-color: #bcbc20;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  border-radius: 0 0 0 100%;
 }
+
+.buttonWrapper {
+/*    position: absolute;
+ */   margin-left: 100px;
+  margin-top: 100px;
+}
+
+/* .spacer {
+  width: 30px;
+  background-color:#353333;
+  height: 30px;
+} */
 
 @media only screen and (max-width: 1150px) {
-  body {
-    line-height: 1.2;
+
   }
 
-  .square {
-    width: 12%;
-    height: 3%;
-    background-color: #FAC51C;
-    margin-bottom: .5%;
-    margin-right: .5%;
-  }
 
-  .marker {
-    font-size: 55px;
-    color: #475577;
-    text-align: center;
-    margin-left: 29%;
-  }
 
 }
 
 @media only screen and (max-width: 900px) {
-  body {
-    line-height: 1;
-  }
-  .outerContainer {
-    height: 50%;
-    width: 65%;
+
   }
 
-  .square {
-    width: 15%;
-    height: 5%;
-    background-color: #FAC51C;
-    margin-bottom: .5%;
-    margin-right: .5%;
-  }
-
-  .marker {
-    font-size: 55px;
-    color: #475577;
-    text-align: center;
-    margin-left: 25%;
-  }
 
 }
