@@ -7,24 +7,16 @@
 <link rel="stylesheet" href="css/mystyles.css" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 </head>
-  <body ng-app="simon" ng-controller="GameController"  >
+  <body ng-app="simon" ng-controller="GameController" ng-init="buttonSelection()" >
 
-<div class="spacer"></div>
 <div class="outerCircle">
-  <div class="simonCircle">
-<!--     <h1>Simon</h1>
- -->  </div>
- <div class="buttonWrapper">
-   <button class="topLeft"></button>
-<!--    <div class="spacer"></div>
- -->   <button class="topRight"></button>
-   <button class="bottomLeft"></button>
-   <button class="bottomRight"></button>
-
- </div>
-
-
-
+   <div class="buttonWrapper">
+     <button class="topLeft" ng-click="playerSelection(1)"></button>
+     <button class="topRight" ng-click="playerSelection(2)"></button>
+   <div class="middleSpace"></div>
+     <button class="bottomLeft" ng-click="playerSelection(4)"></button>
+     <button class="bottomRight" ng-click="playerSelection(3)"></button>
+   </div>
 </div>
 
   <script src="bower_components/angular/angular.js"></script>
