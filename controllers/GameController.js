@@ -19,12 +19,13 @@ $scope.buttonSelection = function() {
 //populates playerArray and calls compareArrays function
 $scope.playerSelection = function(selection) {
   $scope.playerArray.push(selection);
-  console.log("playerSelection Function playerArray = ", $scope.playerArray);
-  console.log("=========================================================");
-  if($scope.playerArray.length == $scope.roundArray.length) {
+  // $scope.compareArrays();
+  // console.log("playerSelection Function playerArray = ", $scope.playerArray);
+  // console.log("=========================================================");
+  if($scope.playerArray.length >= 1) {
     console.log("SAME LENGTH ");
-    console.log("playerSelection Function playerArray = ", $scope.playerArray);
-    console.log("playerSelection Function roundArray = ", $scope.roundArray);
+    // console.log("playerSelection Function playerArray = ", $scope.playerArray);
+    // console.log("playerSelection Function roundArray = ", $scope.roundArray);
     $scope.compareArrays();
   }
 }
@@ -33,19 +34,32 @@ $scope.playerSelection = function(selection) {
 $scope.compareArrays = function() {
   console.log("Making it to compareArrays");
   roundArray = $scope.roundArray;
-  for(var i = 0; i < roundArray.length; i++) {
+  for(var i = 0; i < $scope.playerArray.length; i++) {
     console.log("$scope.playerArray[i] = ",  $scope.playerArray[i] );
     console.log("roundArray[i] = ",  roundArray[i] )
 
     if($scope.playerArray[i] == roundArray[i]) {
       $scope.arraysAreEqual = true;
     }
+    //This works but i need to do more than just set arraysAreEqual to false
+    //Could play error noise
     else if($scope.playerArray[i] != roundArray[i]) {
+      var mistakeSound = new Audio('css/sounds/sadTrombone.mp3');
+      mistakeSound.play();
       $scope.arraysAreEqual = false;
+      console.log("COMPARE ARRAYS ERROR PLAYER ARRAY = ", $scope.playerArray);
+      console.log("COMPARE ARRAYS ERROR ROUND ARRAY = ", $scope.roundArray);
+
+
+      $scope.playerArray = [];
       break;
     }
   }
   console.log("line 37, $scope.arraysAreEqual ", $scope.arraysAreEqual);
+}
+
+$scope.compareArraysIncrementally = function() {
+
 }
 
 //plays sounds on player button press
@@ -95,7 +109,7 @@ $scope.gamePlayer = function() {
   var roundArray = $scope.roundArray;
   console.log("line 80 arraysAreEqual ", $scope.arraysAreEqual);
   if($scope.playerArray.length == roundArray.length && $scope.arraysAreEqual) {
-    console.log("Correct selection");
+    console.log("Correct selection PLAYING BACK FROM 103=========================");
     console.log("============================================")
     $scope.buttonSelection();
 
@@ -103,15 +117,22 @@ $scope.gamePlayer = function() {
        $scope.playBack(roundArray);
     }, 2000);
 
-    //Reset playerArray
+    //Reset playerArray & arraysAreEqual
     $scope.playerArray = [];
+    // $scope.arraysAreEqual = false;
   }
-  else if(!$scope.arraysAreEqual) {
-    console.log("Incorrect selection");
+  //plays on init()
+  else if(roundArray.length == 1) {
     setTimeout(function() {
       $scope.playBack(roundArray);
    }, 2000);
   }
+  // else if(!$scope.arraysAreEqual) {
+  //   console.log("Incorrect selection PLAYING BACK FROM 113=========================");
+  //   setTimeout(function() {
+  //     $scope.playBack(roundArray);
+  //  }, 2000);
+  // }
 }
 
 }]);
